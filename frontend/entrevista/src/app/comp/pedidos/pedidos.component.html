@@ -1,0 +1,34 @@
+<div class="col-md-12">
+  <div class="col-md-6 offset-md-3 ">
+    <h2 class="text-center">Mantenimientos de pedidos</h2>
+    <form [formGroup]="pedidoForm" (ngSubmit)="onSubmit()">
+      
+      <div class="form-group">
+        <label for="id">Id:</label>
+        <input type="number" formControlName="idPedido" placeholder="Identificador" name="idPedido" (keyup.enter)="onBuscar()" class="form-control" id="idPedido">
+      </div>
+
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" formControlName="nombre" placeholder="Nombre" name="nombre" class="form-control" id="nombre">
+      </div>
+
+      <div class="form-group">
+        <label for="monto">Monto:</label>
+        <input type="number" formControlName="monto" placeholder="Monto" name="monto" class="form-control" id="monto">
+      </div>
+
+      <div class="form-group">
+        <label for="descuento">Descuento:</label>
+        <input type="number" formControlName="descuento" placeholder="Descuento" name="descuento" class="form-control" id="descuento">
+      </div>
+      <div class="row">
+        <div class="col-md-3"><button class="btn btn-success" (click)="onAgregar()">Agregar</button></div>
+        <div class="col-md-3"><button class="btn btn-info" (click)="onActualizar()">Actualizar</button></div>
+        <div class="col-md-3"><button class="btn btn-danger" (click)="onEliminar()">Eliminar</button></div>
+        <div class="col-md-3"><button class="btn btn-default" (click)="onCancelar()">Cancelar</button></div>        
+      </div>
+    </form>
+  </div>
+</div>
+{{ titulo }}
