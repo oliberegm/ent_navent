@@ -1,0 +1,10 @@
+2- Suponiendo que la tabla Pedidos tiene muchos registros y columnas (algunas de ellas
+nullable, algunas BLOB / "binary-large-object"), que consideraciones se deberían tener en
+cuenta para realizar desde un sitio web consultas a la base de datos de manera
+eficiente? Discuta performance a nivel motor de base de datos, networking, capa
+aplicativa desde donde se realizan las solicitudes, entre otros aspectos que considere
+relevantes.
+
+Respuesta_
+La estrategia mas importante es implantar una serie de vistas o indices a los campos para evitar
+en todo momento los campos de gran tamaño y asi evitar saturar la memoria.
